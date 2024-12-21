@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Farm@Uaf - Login & Sign Up</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="img/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="css/sign.css">
+    <style>
+      button {
+        transition: all 0.2s ease-in-out;
+        color: #fff !important;
+      }
+      body {
+        background-image: url('./img/carousel-1.jpg');
+        
+      }
+
+    </style>
+  </head>
+  <body class="">
+  <div class="container">
+    <h2>Welcome to Farm@Uaf</h2>
+    <div>
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn">Sign Up</button>
+    </div>
+    <form id="loginForm">
+      <div>
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" name="loginEmail" required />
+      </div>
+      <div>
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" required />
+      </div>
+      <button type="submit">Login</button>
+      <button type="button">Forgot Password?</button>
+    </form>
+    <form id="signupForm" class="hidden">
+      <div>
+        <label for="signupName">Name</label>
+        <input type="text" id="signupName" name="signupName" required />
+      </div>
+      <div>
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" name="signupEmail" required />
+      </div>
+      <div>
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" />
+      </div>
+      <div>
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" name="signupPassword" required />
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+    <script>
+      const loginBtn = document.getElementById("loginBtn");
+      const signupBtn = document.getElementById("signupBtn");
+      const loginForm = document.getElementById("loginForm");
+      const signupForm = document.getElementById("signupForm");
+
+      const initForms = () => {
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+        loginBtn.style.color = "#065f46"; 
+        signupBtn.style.color = "#9ca3af"; 
+      };
+
+      document.addEventListener("DOMContentLoaded", initForms);
+
+      loginBtn.addEventListener("click", () => {
+        loginForm.style.display = "block";
+        signupForm.style.display = "none";
+        loginBtn.style.color = "#065f46"; 
+        signupBtn.style.color = "#9ca3af"; 
+      });
+
+      signupBtn.addEventListener("click", () => {
+        signupForm.style.display = "block";
+        loginForm.style.display = "none";
+        signupBtn.style.color = "#065f46"; 
+        loginBtn.style.color = "#9ca3af"; 
+      });
+    </script>
+  </body>
+</html>

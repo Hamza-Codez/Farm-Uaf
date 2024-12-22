@@ -78,8 +78,7 @@ Your contribution as a backend developer will bring this project to life by inte
 ## Setup Instructions for Frontend
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/YourUsername/FarmUaf.git
+   ```bash https://github.com/Hamza-Codez/Farm-Uaf1.1-frontend.git
    ```
 
 2. Navigate to the project directory:
